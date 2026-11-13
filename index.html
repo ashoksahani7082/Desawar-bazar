@@ -1,68 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="theme-color" content="#071321" />
-  <title>Desawar Bazar — Official App Download</title>
-  <meta name="description" content="Download the Desawar Bazar Android APK." />
-  <style>
-    :root { --panel:rgba(255,255,255,.075); --line:rgba(157,210,255,.2); --white:#f5faff; --muted:#a9bfd2; }
-    *{box-sizing:border-box}
-    body{margin:0;min-height:100vh;color:var(--white);font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",Arial,sans-serif;background:radial-gradient(ellipse at 15% 10%,rgba(24,132,220,.22),transparent 34%),radial-gradient(ellipse at 90% 80%,rgba(0,204,255,.13),transparent 32%),linear-gradient(145deg,#06101c,#0a1d30 55%,#071321);overflow-x:hidden}
-    body:before,body:after{content:"";position:fixed;z-index:-1;border-radius:50%;filter:blur(2px);pointer-events:none}
-    body:before{width:340px;height:340px;top:12%;right:-180px;background:radial-gradient(circle at 35% 35%,rgba(112,220,255,.32),rgba(34,137,255,.04) 65%,transparent 70%);animation:float 9s ease-in-out infinite}
-    body:after{width:280px;height:280px;bottom:-120px;left:-120px;background:radial-gradient(circle at 50% 40%,rgba(36,151,255,.24),transparent 70%);animation:float 11s ease-in-out infinite reverse}
-    @keyframes float{50%{transform:translateY(-24px) translateX(12px)}}
-    .topbar{max-width:1120px;margin:auto;padding:22px 26px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid rgba(180,220,255,.12)}
-    .brand{display:flex;align-items:center;gap:12px;font-weight:800;font-size:21px;letter-spacing:-.5px}
-    .logo{width:42px;height:42px;border-radius:14px;display:grid;place-items:center;background:linear-gradient(145deg,#8be5ff,#248cff);color:#06213a;font-size:23px;box-shadow:0 0 28px rgba(53,168,255,.3)}
-    .app-tag{border:1px solid var(--line);border-radius:999px;padding:9px 15px;color:#d7edff;font-size:13px;background:rgba(255,255,255,.04)}
-    main{width:min(100% - 32px,900px);margin:0 auto;padding:66px 0 54px;text-align:center}
-    .app-icon{width:112px;height:112px;margin:0 auto 25px;border-radius:30px;display:grid;place-items:center;font-size:53px;font-weight:900;color:#eaf8ff;background:linear-gradient(145deg,#1c9bff,#1556a5);border:1px solid rgba(181,231,255,.65);box-shadow:0 0 0 8px rgba(53,168,255,.07),0 18px 55px rgba(0,125,255,.3);animation:pop .8s ease both}
-    @keyframes pop{from{opacity:0;transform:translateY(18px) scale(.92)}to{opacity:1;transform:translateY(0) scale(1)}}
-    h1{font-size:clamp(38px,7vw,66px);line-height:1.04;letter-spacing:-2.5px;margin:0 0 16px}
-    h1 span{background:linear-gradient(90deg,#f6fbff,#70d8ff);-webkit-background-clip:text;background-clip:text;color:transparent}
-    .pill{display:inline-flex;align-items:center;gap:8px;border:1px solid rgba(99,194,255,.32);border-radius:999px;padding:8px 15px;color:#bdeaff;background:rgba(37,147,232,.1);font-size:13px;font-weight:650}
-    .intro{max-width:620px;margin:20px auto 0;color:var(--muted);font-size:17px;line-height:1.75}
-    .features{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;max-width:700px;margin:35px auto 34px}
-    .feature{padding:20px 12px;border:1px solid var(--line);border-radius:20px;background:var(--panel);backdrop-filter:blur(14px);box-shadow:inset 0 1px rgba(255,255,255,.06);transition:transform .25s,border-color .25s}
-    .feature:hover{transform:translateY(-5px);border-color:rgba(119,221,255,.55)}
-    .feature .ico{font-size:25px;margin-bottom:9px}.feature strong{display:block;font-size:14px}.feature small{display:block;margin-top:5px;color:var(--muted);font-size:12px}
-    .download-wrap{margin:0 auto;max-width:470px}
-    .download{display:flex;justify-content:center;align-items:center;gap:13px;width:100%;padding:19px 24px;border-radius:18px;text-decoration:none;color:#04192b;font-size:20px;font-weight:850;background:linear-gradient(100deg,#8ceaff,#36aaff 55%,#5bceff);box-shadow:0 12px 35px rgba(26,151,255,.3),inset 0 1px rgba(255,255,255,.8);transition:transform .2s,filter .2s}
-    .download:hover{transform:translateY(-3px);filter:brightness(1.07)}.download:active{transform:translateY(0)}.download svg{width:25px;height:25px}
-    .subtext{color:#a8c4d9;font-size:12px;margin:13px 0 0}
-    .notice{max-width:560px;margin:30px auto 0;padding:15px 17px;border:1px solid rgba(157,210,255,.14);border-radius:15px;background:rgba(255,255,255,.035);color:#a9bfd2;font-size:12px;line-height:1.65;text-align:left}.notice b{color:#e4f5ff}
-    footer{max-width:1120px;margin:0 auto;padding:22px 26px 30px;text-align:center;border-top:1px solid rgba(180,220,255,.1);color:#718da5;font-size:12px}
-    @media(max-width:600px){.topbar{padding:17px 18px}.brand{font-size:18px}.app-tag{font-size:11px;padding:8px 11px}main{padding:52px 0 42px}.app-icon{width:94px;height:94px;border-radius:25px;font-size:45px}h1{letter-spacing:-1.5px}.intro{font-size:15px;padding:0 8px}.features{gap:8px;margin:28px auto}.feature{padding:16px 7px;border-radius:16px}.feature strong{font-size:12px}.feature small{font-size:10px}.download{font-size:18px;padding:17px 15px}.notice{font-size:11px}}
-  </style>
-</head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="theme-color" content="#080606">
+<title>Desawar Bazar — Android App</title>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root{--red:#e50914;--red-light:#ff3945;--text:#f8fafc}*{box-sizing:border-box}html,body{margin:0;min-height:100%;font-family:Inter,Arial,sans-serif;background:#050505;color:var(--text)}
+body{min-height:100vh;display:flex;align-items:center;justify-content:center;position:relative;padding:28px 16px;overflow-x:hidden;background:radial-gradient(ellipse at 50% 20%,#271010 0%,#100909 48%,#050505 100%)}
+.bg-orb{position:fixed;border-radius:50%;filter:blur(120px);opacity:.35;z-index:0;pointer-events:none;animation:float 12s infinite ease-in-out alternate}.orb-1{width:360px;height:360px;background:#e50914;top:-140px;left:-130px}.orb-2{width:420px;height:420px;background:#8b1e2d;bottom:-190px;right:-140px;animation-delay:-6s}
+@keyframes float{0%{transform:translate(0,0) scale(1)}100%{transform:translate(45px,55px) scale(1.12)}}
+.glass-card{width:min(100%,420px);position:relative;overflow:hidden;display:flex;flex-direction:column;align-items:center;text-align:center;padding:34px 28px 30px;border:1px solid rgba(229,9,20,.25);border-radius:32px;background:linear-gradient(145deg,rgba(35,19,20,.92),rgba(10,10,10,.96));backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);box-shadow:0 24px 65px #000b,0 0 35px #e5091410,inset 0 1px #ffffff0a;z-index:2}.glass-card:before{content:"";position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,transparent,#e50914,#ff626a,#e50914,transparent)}
+.logo-stage{position:relative;width:142px;height:142px;margin:4px auto 25px;display:grid;place-items:center}.rotating-ring{position:absolute;inset:-4px;border-radius:50%;background:conic-gradient(from 0deg,transparent 0%,transparent 28%,#8b1e2d 48%,#ff3945 72%,#8b1e2d 90%,transparent 100%);animation:rotate 3s linear infinite}.rotating-ring:after{content:"";position:absolute;inset:3px;background:#100909;border-radius:50%}@keyframes rotate{to{transform:rotate(360deg)}}
+.logo-inner{position:relative;z-index:1;width:132px;height:132px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:radial-gradient(ellipse at 50% 25%,#321010,#070707 70%);border:2px solid #351013;box-shadow:0 0 28px #e5091425}.logo-letter{font-size:76px;line-height:1;font-weight:900;font-style:italic;color:#ff3945;text-shadow:0 0 28px #e5091470}
+.live{display:inline-flex;align-items:center;gap:9px;padding:9px 17px;margin-bottom:17px;border:1px solid #572126;border-radius:99px;color:#ff6a72;font-size:11px;font-weight:800;letter-spacing:1.8px;background:#1a0c0d}.live-dot{width:8px;height:8px;border-radius:50%;background:#ed3038;box-shadow:0 0 10px #ed3038;animation:blink 1.5s infinite}@keyframes blink{50%{opacity:.45}}
+h1{font-size:32px;line-height:1.15;font-weight:900;letter-spacing:.2px;margin:0 0 9px;color:#fff;text-shadow:0 2px 20px #e5091425}h1 span{color:#ff3945}.subtitle{font-size:14px;font-weight:600;color:#b8aeae;margin:0 0 23px}
+.features{display:flex;align-items:center;justify-content:center;gap:18px;width:100%;margin-bottom:24px;padding:13px 10px;border:1px solid #ffffff12;border-radius:14px;background:#ffffff08;box-shadow:inset 0 1px #ffffff06;font-size:12px;font-weight:700;color:#e8dddd}.features i{color:#ff3945;margin-right:6px}.feature-divider{width:1px;height:20px;background:#ffffff20}
+.app-info{width:100%;display:flex;align-items:center;justify-content:center;gap:9px;border:1px solid #682126;border-radius:17px;background:linear-gradient(135deg,#190a0b,#090707);padding:15px;margin-bottom:20px;box-shadow:inset 0 0 22px #e5091409;color:#d8caca;font-size:12px;font-weight:700;letter-spacing:.5px}.app-info i{font-size:18px;color:#ff3945}
+.download{width:100%;min-height:68px;border-radius:16px;border:1px solid #ff626a;background:linear-gradient(110deg,#a91119,#e51c27 55%,#b50f18);color:white;display:flex;align-items:center;justify-content:center;gap:13px;font-size:17px;font-weight:900;letter-spacing:1.2px;text-decoration:none;box-shadow:0 12px 28px #f00a2425,inset 0 1px #ff9a9e;cursor:pointer;transition:transform .2s,filter .2s}.download:hover{transform:translateY(-2px);filter:brightness(1.08)}.download i{font-size:23px}
+.secure-note{font-size:10px;color:#938585;margin:19px 0 0;text-transform:uppercase;letter-spacing:1.5px;font-weight:700;opacity:.8}.install-note{max-width:330px;font-size:11px;line-height:1.6;color:#a99898;margin:12px 0 0}
+@media(max-width:480px){body{padding:16px 12px}.glass-card{padding:30px 21px 26px;border-radius:27px}.logo-stage{width:126px;height:126px;margin-bottom:22px}.logo-inner{width:116px;height:116px}.logo-letter{font-size:66px}h1{font-size:29px}.subtitle{font-size:13px;margin-bottom:20px}.features{gap:12px;font-size:11px;padding:12px 7px}.app-info{margin-bottom:17px;padding:14px}.download{min-height:64px;font-size:16px}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important}}
+</style></head>
 <body>
-  <header class="topbar">
-    <div class="brand"><div class="logo">D</div><span>Desawar Bazar</span></div>
-    <div class="app-tag">● &nbsp; Android App</div>
-  </header>
-  <main>
-    <div class="app-icon" aria-hidden="true">D</div>
-    <h1><span>Desawar Bazar</span></h1>
-    <div class="pill">✦ &nbsp; Android Application</div>
-    <p class="intro">Desawar Bazar Android app download page. Get the APK directly to your Android device using the button below.</p>
-    <section class="features" aria-label="App details">
-      <div class="feature"><div class="ico">⚡</div><strong>Quick Download</strong><small>Direct APK file</small></div>
-      <div class="feature"><div class="ico">📱</div><strong>Android</strong><small>APK format</small></div>
-      <div class="feature"><div class="ico">⬇️</div><strong>Easy Install</strong><small>Simple steps</small></div>
-    </section>
-    <div class="download-wrap">
-      <a class="download" href="https://raw.githubusercontent.com/ashoksahani7082/Desawar-bazar/main/app-arm64-v8a-release.apk" download>
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12m-5-5 5 5 5-5"/><path d="M5 17v3h14v-3"/></svg>
-        <span>Download APK</span>
-      </a>
-      <p class="subtext">For Android devices only · APK file</p>
-    </div>
-    <div class="notice"><b>Installation help:</b> After downloading, open the APK file and follow your phone's installation prompts. If Android asks for permission to install apps from your browser or file manager, enable it only if you trust this APK and its source.</div>
-  </main>
-  <footer>© <span id="year"></span> Desawar Bazar. All rights reserved.</footer>
-  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
-</body>
-</html>
+<div class="bg-orb orb-1" aria-hidden="true"></div><div class="bg-orb orb-2" aria-hidden="true"></div>
+<main class="glass-card">
+<div class="logo-stage" aria-label="Desawar Bazar app icon"><div class="rotating-ring" aria-hidden="true"></div><div class="logo-inner"><span class="logo-letter">D</span></div></div>
+<div class="live"><span class="live-dot"></span> ANDROID APP</div>
+<h1>DESAWAR <span>BAZAR</span></h1><p class="subtitle">Official Android Application</p>
+<div class="features"><span><i class="fa-solid fa-mobile-screen-button" aria-hidden="true"></i>Android APK</span><span class="feature-divider" aria-hidden="true"></span><span><i class="fa-solid fa-download" aria-hidden="true"></i>Direct Download</span></div>
+<div class="app-info"><i class="fa-brands fa-android" aria-hidden="true"></i><span>APP DOWNLOAD · ANDROID ONLY</span></div>
+<a class="download" href="https://raw.githubusercontent.com/ashoksahani7082/Desawar-bazar/main/app-arm64-v8a-release.apk" download><i class="fa-solid fa-download" aria-hidden="true"></i><span>DOWNLOAD APK</span></a>
+<p class="secure-note"><i class="fa-solid fa-file-arrow-down" aria-hidden="true"></i> &nbsp;APK INSTALLATION</p>
+<p class="install-note">Download the APK, open the file on your Android device, and follow the installation prompts.</p>
+</main></body></html>
